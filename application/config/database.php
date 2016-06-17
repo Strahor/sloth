@@ -64,10 +64,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
-	'database' => 'mydb',
+	'hostname' => 'eu-cdbr-azure-north-e.cloudapp.net',
+	'username' => 'b37c563bc3b64b',
+	'password' => '3c7b4b59',
+	'database' => 'zivandb',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
