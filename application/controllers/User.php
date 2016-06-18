@@ -445,7 +445,7 @@ class User extends CI_Controller {
                 'idTutor' => $profileID,
                 'institucija' => $school,
                 'nivo' => $name,
-                'period' => $startDate + " - " + ($endDate == "" ? "Još Traje" : $endDate),
+                'period' => $startDate . " - " . ($endDate == "" ? "Još Traje" : $endDate),
                 'opis' => ""
             );
             $this->usermodel->addEducation($education);
