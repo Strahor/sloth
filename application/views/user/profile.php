@@ -47,7 +47,7 @@ sa130068
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Izmeni osnovne podatke</h4>
+                        <h4 class="modal-title">Postani tutor</h4>
                     </div>
                     <form action="<?php echo site_url();
                                         echo $isTutor?
@@ -127,7 +127,7 @@ sa130068
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Izađi</button>
-                            <button type="submit" class="btn btn-primary" value="upload">Sačuvaj</button>
+                            <button type="submit" class="btn btn-primary" value="upload">Postani tutor</button>
                         </div>
                     </form>
                 </div><!-- /.modal-content -->

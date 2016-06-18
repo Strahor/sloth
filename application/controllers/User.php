@@ -155,7 +155,6 @@ class User extends CI_Controller {
 
 
         $this->load->library('upload', $config);
-        $slika = "06+";
         if ($this->upload->do_upload('userfile')) {
             $data = array('upload_data' => $this->upload->data());
             $slika = "/img/" . $profileID . $this->upload->data()['file_ext'];
@@ -353,12 +352,12 @@ class User extends CI_Controller {
                     'slika' => $slika,
                 );
                 $this->usermodel->upgradeToTutor($profileID, $tutorData);
-                if ($slika != ""):
+                if (strcpm($slika,"") != 0):
                     $this->usermodel->setImage($idTutor, $slika);
                 endif;
             else:
                 $_SESSION['editInforError'] = $format;
-                redirect(site_url()/* . "/user/profile/" . $profileID */);
+                redirect(site_url() . "/user/profile/" . $profileID );
             endif;
             redirect(site_url() . "/user/profile/" . $profileID);
         else:
