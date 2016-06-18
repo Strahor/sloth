@@ -43,7 +43,7 @@ class User extends CI_Controller {
 
 
         $cnt = 0;
-        if ($data['loggedIn'] && $profileID = $_SESSION['userID']):
+        if ($data['loggedIn'] && $profileID == $_SESSION['userID']):
             $data['onAddress'] = $this->usermodel->getOnAddressClass($_SESSION['userID']);
             $data['online'] = $this->usermodel->getOnlineClass($_SESSION['userID']);
             $data['group'] = $this->usermodel->getGroupClass($_SESSION['userID']);
@@ -59,7 +59,7 @@ class User extends CI_Controller {
             );
             $cnt++;
         endforeach;
-        $data['banned'] = $this->usermodel->getBanned($profileID) == 1;
+        $data['banned'] = $this->usermodel->getBanned($profileID);
         $data['workExperience'] = $this->usermodel->getWorkExperience($profileID);
         $data['certificates'] = $this->usermodel->getCertificates($profileID);
         $data['education'] = $this->usermodel->getEducation($profileID);
@@ -352,7 +352,7 @@ class User extends CI_Controller {
                     'slika' => $slika,
                 );
                 $this->usermodel->upgradeToTutor($profileID, $tutorData);
-                if (strcpm($slika,"") != 0):
+                if (strcmp($slika, "") != 0):
                     $this->usermodel->setImage($idTutor, $slika);
                 endif;
             else:

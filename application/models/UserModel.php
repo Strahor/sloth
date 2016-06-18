@@ -577,7 +577,7 @@ class UserModel extends CI_Model{
     
     public function getBanned($id)
     {
-        $query = $this->db->get_where('Korisnik', array('idKorisnik' => $id), 1);
+        $query = $this->db->get_where('Korisnik', array('idKorisnik' => $id));
         foreach ($query->result() as $row)
         {
             return $row->banovan;
