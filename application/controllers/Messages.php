@@ -233,7 +233,7 @@ class Messages extends CI_Controller
         $messages = $this->messagemodel->getMessages($profileID);
         $cnt = 0;
         foreach($messages as $message):
-            $cnt += $message['procitana'];
+            $cnt += !$message['procitana'];
         endforeach;
         return $cnt;
     }

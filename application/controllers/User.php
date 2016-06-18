@@ -67,6 +67,7 @@ class User extends CI_Controller {
         $data['displayName'] = $this->usermodel->getDisplayName($profileID);
         $data['ratings'] = array();
         $this->load->model('subjectmodel');
+        $data['ocenio'] = false;
         $data['subjects'] = $this->subjectmodel->getSubjects();
         if (sizeof($ratings) != 0):
             $i = 0;
@@ -76,6 +77,9 @@ class User extends CI_Controller {
                 $data['ratings'][$i]['ocena'] = $rating['ocena'];
                 $data['ratings'][$i]['datum'] = $rating['datum'];
                 $data['ratings'][$i]['ocenjivac'] = $this->usermodel->getDisplayName($rating['idKorisnik']);
+                if(isset($_SESSION['userID']) && $rating['idKorisnik'] == $_SESSION['userID']):
+                    $data['ocenio'] = true;
+                endif;
                 $i++;
             endforeach;
         else:
@@ -85,7 +89,8 @@ class User extends CI_Controller {
         $data['onAddressClass'] = $this->usermodel->getOnAddressClass($profileID) == 1;
         $data['onlineClass'] = $this->usermodel->getOnlineClass($profileID) == 1;
         //$data['groupClass'] = $this->usermodel->getEducation($profileID);
-
+        
+        print_r($data['ratings']);
 
         $this->load->view('templates/header');
         $this->load->view('user/profilescripts', $data);
@@ -196,7 +201,7 @@ class User extends CI_Controller {
         $messages = $this->messagemodel->getMessages($profileID);
         $cnt = 0;
         foreach ($messages as $message):
-            $cnt += $message['procitana'];
+            $cnt += !$message['procitana'];
         endforeach;
         return $cnt;
     }

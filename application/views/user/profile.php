@@ -668,7 +668,7 @@ sa130068
     ?>
         <div class="reviews col-xs-12">
             <?php
-            if ($loggedIn):
+            if ($loggedIn && !$ocenio):
                 ?>
                 <form method="post" action="<?php echo site_url()."/user/rate/".$profileID; ?>">
                     <div class="row"><input id="7-xs" name="rating" class="rating rating-loading"  value="3" data-min="0" data-max="5" data-step="0.5" data-display-only="false" data-size="xs"></input></div>
@@ -680,13 +680,14 @@ sa130068
                 <?php
             endif;
         endif;
-        if (sizeof($ratings) == 0):   
+        if (sizeof($ratings) == 0):
         else:
             foreach ($ratings as $rating):?>
                 <div class="review-item-profile">
-                <div class="row"><input id="input-7-xs" name="input-7" class="rating rating-loading"  value="<?php echo $rating['ocena'];?>" data-min="0" data-max="5" data-step="0.5" data-display-only="true" data-size="xs"></input></div>
-		
-                
+                <div class="row">
+                    <input id="input-7-xs" name="input-7" class="rating rating-loading"  value="<?php echo $rating['ocena'];?>" data-min="0" data-max="5" data-step="0.5" data-display-only="true" data-size="xs">
+                    </input>
+                </div>
                 
                 <div class="row"><p><?php echo $rating['text'];?></p></div>
                 <div class="row"><div class="profile-reviewer"><?php echo $rating['ocenjivac']; ?></div>
@@ -696,6 +697,7 @@ sa130068
         endif;
         ?>
         </div>
+            </div>
     <?php
         endif;
         ?>
