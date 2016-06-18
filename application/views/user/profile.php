@@ -283,7 +283,7 @@ sa130068
                         <div class=form-group>
                             <label for="#datetimepicker4">Do:</label>
                             <div class='input-group date' id='datetimepicker4'>
-                                <input name="endDate" id="datetimepicker4-input" type='text' class="form-control" />
+                                <input name="endDate" id="datetimepicker4" type='text' class="form-control" />
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
