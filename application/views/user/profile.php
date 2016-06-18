@@ -609,7 +609,7 @@ sa130068
 
                     if ($loggedIn && $profileID == $_SESSION['userID']):
                         ?>
-                            <a href="<?php echo site_url()."/user/removeDucation/".$skola['idObrazovanje']; ?>"><div class="glyphicon glyphicon-remove"></div></a>
+                            <a href="<?php echo site_url()."/user/removeEducation/".$skola['idObrazovanje']; ?>"><div class="glyphicon glyphicon-remove"></div></a>
                         <?php
                     endif;
 
