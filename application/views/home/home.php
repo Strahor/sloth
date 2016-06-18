@@ -51,7 +51,7 @@ sa130068
 		
 			<div style="font-size:14px;" class="grade">
 			<div class="grade-name"><?php echo $results[0]['ime']; ?></div>
-				<div class="grade-stars"<!--<?php echo $results[0]['ukupnaOcena']; ?>-->>
+				<div class="grade-stars"<?php echo $results[0]['ukupnaOcena']; ?>>
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
@@ -71,7 +71,7 @@ sa130068
 		
 			<div style="font-size:14px;" class="grade">
 			<div class="grade-name"><?php echo $results[1]['ime']; ?></div>
-				<div class="grade-stars"<!--<?php echo $results[1]['ukupnaOcena']; ?>-->>
+				<div class="grade-stars"<?php echo $results[1]['ukupnaOcena']; ?>>
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
@@ -91,13 +91,14 @@ sa130068
 		
 			<div style="font-size:14px;" class="grade">
 			<div  class="grade-name"><?php echo $results[2]['ime']; ?></div>
-				<div class="grade-stars"<!--<?php echo $results[2]['ukupnaOcena']; ?>-->>
+				<!--<div class="grade-stars"<?php echo $results[2]['ukupnaOcena']; ?>>
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
-				</div>
+				</div>-->
+                        <div class="my-rating"><input id="input-7-xs" name="input-7" class="rating rating-loading"  value="<?php echo $results[2]['ukupnaOcena'] / 2;?>" data-min="0" data-max="5" data-step="0.5" data-display-only="true" data-size="xxs"></input></div>
 			</div>
 			</a>
 		</div>
