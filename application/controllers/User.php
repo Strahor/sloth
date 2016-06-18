@@ -89,8 +89,7 @@ class User extends CI_Controller {
         $data['onAddressClass'] = $this->usermodel->getOnAddressClass($profileID) == 1;
         $data['onlineClass'] = $this->usermodel->getOnlineClass($profileID) == 1;
         //$data['groupClass'] = $this->usermodel->getEducation($profileID);
-        
-        print_r($data['ratings']);
+
 
         $this->load->view('templates/header');
         $this->load->view('user/profilescripts', $data);
