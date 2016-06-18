@@ -325,6 +325,8 @@ class Home extends CI_Controller {
                 endif;
                 $city = $_POST['city'];
 
+                $phone = $_POST['phone'];
+                
                 if ($failed == TUTOR):
                     $user = array(
                         'ime' => $fname,

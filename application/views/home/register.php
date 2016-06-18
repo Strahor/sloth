@@ -125,7 +125,7 @@ sa130068
                 endif;
                 ?>
 		<label for="tutor-phone">Telefon</label>
-		<input type="number" class="form-control" id="tutor-phone" name="tutor-phone">
+		<input type="number" class="form-control" id="tutor-phone" name="phone">
 	</div>
 
 	<button type="submit" name="submit" value="tutor" class="btn btn-lg btn-primary">Postani predavač</button>
