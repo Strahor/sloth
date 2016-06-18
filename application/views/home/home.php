@@ -19,7 +19,7 @@ sa130068
           <div class="container">
             <div class="carousel-caption">
               <h1>Privatni časovi iz engleskog A1-C2<br/>Spremanje za CAE, CPE, TOEFL, IELTS</h1>
-              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Saznaj više</a></p>-->
+              <p><a class="btn btn-lg btn-primary" href="<?php echo base_url(); ?>search?subject=3&discipline=14" role="button">Saznaj više</a></p>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@ sa130068
           <div class="container">
             <div class="carousel-caption">
               <h1>Škola gitare za početnike</h1>
-              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Saznaj više</a></p>-->
+              <p><a class="btn btn-lg btn-primary" href="<?php echo base_url(); ?>search?subject=4&discipline=18" role="button">Saznaj više</a></p>
             </div>
           </div>
         </div>
