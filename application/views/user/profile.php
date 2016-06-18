@@ -172,7 +172,7 @@ sa130068
                             endforeach;
                             ?>
                         </select>
-                        <select name="disciplines" id="disciplines">
+                        <select name="discipline" id="disciplines">
                             
                         </select>
                         </div>
