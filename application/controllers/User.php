@@ -293,13 +293,14 @@ class User extends CI_Controller {
             if (isset($stariMejl) && $format == 0):
                 $this->usermodel->setEmail($profileID, $mejl);
             endif;
-
+            
+            $slika = "";
             
             
             if (isset($input_file_field_name)):
                 $config['upload_path'] = './profileimgs/';
                 $config['allowed_types'] = 'jpeg|jpg|png';
-                $config['max_size'] = 1024;
+                $config['max_size'] = 1048576;
                 $config['max_width'] = 1024;
                 $config['max_height'] = 1024;
                 $config['file_name'] = "" . $profileID . "." . end(explode(".", $_FILES[$input_file_field_name]['name']));
@@ -307,7 +308,7 @@ class User extends CI_Controller {
 
 
                 $this->load->library('upload', $config);
-                $slika = "";
+                
                 if ($this->upload->do_upload('userfile')) {
                     $data = array('upload_data' => $this->upload->data());
                     $slika = "/img/" . $profileID . $this->upload->data()['file_ext'];
