@@ -1,6 +1,6 @@
 <!--sa130068-->
 <?php
-define("EMAILCHECK", "/^[a-zA-ZčćžđšŠĐŽĆČ][a-zA-Z\dčćžđšŠĐŽĆČ]*@[a-zA-Z]+\.[a-zA-Z]+$/");
+define("EMAILCHECK", "/^[a-zA-ZčćžđšŠĐŽĆČ][.a-zA-Z\dčćžđšŠĐŽĆČ]*@[a-zA-Z]+\.[a-zA-Z]+$/");
 define("NAMECHECK", "/^[A-ZŠĐŽĆČ][a-zčćžđš]+ ?[a-zčćžđš]+$/");
 define("PHONECHECK", "/^\d*$");
 define("NICKNAMECHECK", "/^[a-zA-ZčćžđšŠĐŽĆČ]+$/");
