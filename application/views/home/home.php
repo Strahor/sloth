@@ -47,7 +47,7 @@ sa130068
 
 		<div class="col-sm-4">
 		<a class="link-tutor" href="<?php echo site_url()."/user/profile/".$results[0]['idTutor']; ?>">
-			<img  src="<?php echo $results[0]['slika']; ?>" class="tut-image img-rounded img-responsive center-block" />
+			<img width="300px" height="300px" src="<?php echo $results[0]['slika']; ?>" class="tut-image img-rounded img-responsive center-block" />
 		
 			<div class="grade">
 			<div class="grade-name"><?php echo $results[0]['ime']; ?></div>
@@ -67,7 +67,7 @@ sa130068
 		?>
 		<div class="col-sm-4">
 		<a class="link-tutor" href="<?php echo site_url()."/user/profile/".$results[1]['idTutor']; ?>">
-			<img  src="<?php echo $results[1]['slika']; ?>" class="tut-image img-rounded img-responsive center-block" />
+			<img width="300px" height="300px" src="<?php echo $results[1]['slika']; ?>" class="tut-image img-rounded img-responsive center-block" />
 		
 			<div class="grade">
 			<div class="grade-name"><?php echo $results[1]['ime']; ?></div>
@@ -87,7 +87,7 @@ sa130068
 		?>
 		<div class="col-sm-4">
 		<a class="link-tutor" href="<?php echo site_url()."/user/profile/".$results[2]['idTutor']; ?>">
-			<img  src="<?php echo $results[2]['slika']; ?>" class="tut-image img-rounded img-responsive center-block" />
+			<img width="300px" height="300px" src="<?php echo $results[2]['slika']; ?>" class="tut-image img-rounded img-responsive center-block" />
 		
 			<div class="grade">
 			<div class="grade-name"><?php echo $results[2]['ime']; ?></div>
