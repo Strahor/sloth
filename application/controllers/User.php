@@ -418,7 +418,7 @@ class User extends CI_Controller {
                 'idTutor' => $profileID,
                 'naziv' => $jobName,
                 'poslodavac' => $employer,
-                'period' => $startDate . " - " . ($stillworking ? "Još Traje" : $endDate),
+                'period' => $startDate . " - " . ($stillWorking ? "Još Traje" : $endDate),
                 'opis' => ""
             );
             $this->usermodel->addWorkExperience($work);
