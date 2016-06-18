@@ -340,7 +340,7 @@ class Home extends CI_Controller {
                     $this->UserModel->setRegion($userID, $city);
                     
                     $_SESSION['userID'] = $userID;
-                    $_SESSION['userName'] = $this->UserModel->getDisplayName($user);
+                    $_SESSION['userName'] = $this->UserModel->getDisplayName($userID);
 
                     redirect(site_url() . '/home/index');
                 //$this->index();
