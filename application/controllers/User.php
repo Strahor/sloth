@@ -325,7 +325,7 @@ class User extends CI_Controller {
             
             if ($ime == NULL || $prezime == NULL || $grad == NULL || $telefon == NULL):
                 //redirect(site_url()/* . "/user/profile/" . $profileID*/);
-                show_404();
+                redirect("/user/profile/" . $profileID);
             endif;
             $format = 0;
             if (!$this->validation->Email($mejl)):
@@ -377,7 +377,7 @@ class User extends CI_Controller {
             show_404();
         endif;
         if (!isset($_POST['price']) || !isset($_POST['subject']) || !isset($_POST['discipline'])):
-            show_404();
+            redirect("/user/profile/" . $profileID);
         endif;
         $subject = $_POST['subject'];
         $discipline = $_POST['discipline'];
@@ -386,7 +386,7 @@ class User extends CI_Controller {
         $this->load->model('usermodel');
 
         if ($this->subjectmodel->getSubject($subject) == NULL || $this->subjectmodel->getDiscipline($subject, $discipline) == NULL):
-            show_404();
+            redirect("/user/profile/" . $profileID);
         endif;
 
         $data = array(
@@ -406,13 +406,21 @@ class User extends CI_Controller {
         $this->load->model('usermodel');
 
         $jobName = isset($_POST['jobName']) ? $_POST['jobName'] : "";
+        if (strlen($jobName) > 45):
+            $temp = substr($jobName, 0, 42);
+            $jobName = $temp. "...";
+        endif;
         $employer = isset($_POST['employer']) ? $_POST['employer'] : "";
+        if (strlen($employer) > 45):
+            $temp = substr($employer, 0, 42);
+            $employer = $temp. "...";
+        endif;
         $startDate = isset($_POST['startDate']) ? $_POST['startDate'] : "";
         $endDate = isset($_POST['endDate']) ? $_POST['endDate'] : "";
         $stillWorking = isset($_POST['stillWorking']) ? $_POST['stillWorking'] : false;
 
         if ($employer == "" || $jobName == "" || $startDate == "" || ($endDate == "" && $stillWorking == false)):
-            show_404(); //change this
+            redirect("/user/profile/" . $profileID);
         else:
             $work = array(
                 'idTutor' => $profileID,
@@ -433,13 +441,21 @@ class User extends CI_Controller {
         $this->load->model('usermodel');
 
         $school = isset($_POST['school']) ? $_POST['school'] : "";
+        if (strlen($school) > 90):
+            $temp = substr($school, 0, 87);
+            $school = $temp. "...";
+        endif;
         $name = isset($_POST['name']) ? $_POST['name'] : "";
+        if (strlen($name) > 45):
+            $temp = substr($name, 0, 42);
+            $name = $temp. "...";
+        endif;
         $startDate = isset($_POST['startDate']) ? $_POST['startDate'] : "";
         $endDate = isset($_POST['endDate']) ? $_POST['endDate'] : "";
         $ongoing = isset($_POST['ongoing']) ? $_POST['ongoing'] : false;
 
         if ($school == "" || $name == "" || $startDate == "" || ($endDate == "" && $ongoing == false)):
-            show_404(); //change this
+            redirect("/user/profile/" . $profileID);
         else:
             $education = array(
                 'idTutor' => $profileID,
@@ -460,11 +476,19 @@ class User extends CI_Controller {
         $this->load->model('usermodel');
 
         $institution = isset($_POST['institution']) ? $_POST['institution'] : "";
+        if (strlen($institution) > 45):
+            $temp = substr($institution, 0, 42);
+            $institution = $temp. "...";
+        endif;
         $name = isset($_POST['name']) ? $_POST['name'] : "";
+        if (strlen($name) >=45):
+            $temp = substr($name, 0, 42);
+            $name = $temp. "...";
+        endif;
         $expires = isset($_POST['expires']) ? $_POST['expires'] : "";
 
         if ($institution == "" || $name == "" || $expires == ""):
-            show_404(); //change this
+            redirect("/user/profile/" . $profileID);
         else:
             $certificate = array(
                 'idTutor' => $profileID,
@@ -488,7 +512,7 @@ class User extends CI_Controller {
 
         $reason = isset($_POST['reason']) ? $_POST['reason'] : "";
         if ($reason == ""):
-        //show_404();//change this
+            redirect("/user/profile/" . $profileID);
         else:
             $report = array(
                 'idPosiljalac' => $_SESSION['userID'],
