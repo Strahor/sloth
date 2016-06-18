@@ -241,7 +241,10 @@ sa130068
                             <input name="stillWorking" type="checkbox" id="present-checkbox">
                             <label id="present-label" for="#present-checkbox">Još traje</label>  	
                         </div>
-
+                        <div class="form-group">
+                            <label for="#description">Opis:</label>
+                            <textarea id="description" name="description"></textarea>
+                        </div>
 
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sačuvaj</button>
@@ -293,7 +296,10 @@ sa130068
                             <input name="ongoing" type="checkbox" id="present-checkbox-2">
                             <label id="present-label" for="#present-checkbox-2">Još traje</label>  	
                         </div>
-
+                        <div class="form-group">
+                            <label for="#description">Opis:</label>
+                            <textarea id="description" name="description"></textarea>
+                        </div>
 
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sačuvaj</button>

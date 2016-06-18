@@ -419,6 +419,8 @@ class User extends CI_Controller {
         $endDate = isset($_POST['endDate']) ? $_POST['endDate'] : "";
         $stillWorking = isset($_POST['stillWorking']) ? $_POST['stillWorking'] : false;
 
+        $opis = isset($_POST['description'])? $_POST['description'] : "";
+        
         if ($employer == "" || $jobName == "" || $startDate == "" || ($endDate == "" && $stillWorking == false)):
             redirect("/user/profile/" . $profileID);
         else:
@@ -427,7 +429,7 @@ class User extends CI_Controller {
                 'naziv' => $jobName,
                 'poslodavac' => $employer,
                 'period' => $startDate . " - " . ($stillWorking ? "Još Traje" : $endDate),
-                'opis' => ""
+                'opis' => $opis
             );
             $this->usermodel->addWorkExperience($work);
             redirect("/user/profile/" . $profileID);
@@ -454,6 +456,8 @@ class User extends CI_Controller {
         $endDate = isset($_POST['endDate']) ? $_POST['endDate'] : "";
         $ongoing = isset($_POST['ongoing']) ? $_POST['ongoing'] : false;
 
+        $opis = isset($_POST['description'])? $_POST['description'] : "";
+        
         if ($school == "" || $name == "" || $startDate == "" || ($endDate == "" && $ongoing == false)):
             redirect("/user/profile/" . $profileID);
         else:
@@ -462,7 +466,7 @@ class User extends CI_Controller {
                 'institucija' => $school,
                 'nivo' => $name,
                 'period' => $startDate . " - " . ($endDate == "" ? "Još Traje" : $endDate),
-                'opis' => ""
+                'opis' => $opis
             );
             $this->usermodel->addEducation($education);
             redirect("/user/profile/" . $profileID);
