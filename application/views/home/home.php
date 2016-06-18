@@ -41,7 +41,7 @@ sa130068
 <div class="row"><h2 class="center-block">Preporučeni predavači</h2></div>
 	<div class="row">
 		<?php
-                print_r($results);
+                //print_r($results);
 			if (isset($results[0])):	
 		?>
 
@@ -66,7 +66,7 @@ sa130068
 		if(isset($results[1])):
 		?>
 		<div class="col-sm-4">
-		<a class="link-tutor" href="<?php echo site_url()."/user/profile/".$results[0]['idTutor']; ?>">
+		<a class="link-tutor" href="<?php echo site_url()."/user/profile/".$results[1]['idTutor']; ?>">
 			<img  src="<?php echo $results[1]['slika']; ?>" class="tut-image img-rounded img-responsive center-block" />
 		
 			<div class="grade">
@@ -86,7 +86,7 @@ sa130068
 		if(isset($results[2])):
 		?>
 		<div class="col-sm-4">
-		<a class="link-tutor" href="<?php echo site_url()."/user/profile/".$results[0]['idTutor']; ?>">
+		<a class="link-tutor" href="<?php echo site_url()."/user/profile/".$results[2]['idTutor']; ?>">
 			<img  src="<?php echo $results[2]['slika']; ?>" class="tut-image img-rounded img-responsive center-block" />
 		
 			<div class="grade">

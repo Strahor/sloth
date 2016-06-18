@@ -61,6 +61,12 @@ class Home extends CI_Controller {
             'ime' => $this->usermodel->getDisplayName(81),
             'ukupnaOcena' => $this->usermodel->getOverallRating(81)
         );
+        $data['results'][2] = array(
+            'idTutor' => 91,
+            'slika' => $this->usermodel->getImage(91),
+            'ime' => $this->usermodel->getDisplayName(91),
+            'ukupnaOcena' => $this->usermodel->getOverallRating(91)
+        );
         
         $this->load->view('templates/header');
         $this->load->view('home/homeScripts');
