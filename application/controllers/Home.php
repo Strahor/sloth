@@ -27,10 +27,12 @@ class Home extends CI_Controller {
     }
 
     public function index() {
+        
         if(isset($_SESSION['initialSearcgString'])):
             unset($_SESSION['initialSearcgString']);
         endif;
         $this->load->model('subjectmodel');
+        $this->load->model('usermodel');
         $search = array(
             'minCena' => NULL,
             'maxCena' => NULL,
@@ -46,7 +48,20 @@ class Home extends CI_Controller {
             'pretraga' => "",
             'banovan' => false
         );
-        $data['results'] = array(); //$this->subjectmodel->getTutorsByCriteria($search);
+        $data['results'] = array(); 
+        $data['results'][0] = array(
+            'idTutor' => 71,
+            'slika' => $this->usermodel->getImage(71),
+            'ime' => $this->usermodel->getDisplayName(71),
+            'ukupnaOcena' => $this->usermodel->getOverallRating(71)
+        );
+        $data['results'][1] = array(
+            'idTutor' => 81,
+            'slika' => $this->usermodel->getImage(81),
+            'ime' => $this->usermodel->getDisplayName(81),
+            'ukupnaOcena' => $this->usermodel->getOverallRating(81)
+        );
+        
         $this->load->view('templates/header');
         $this->load->view('home/homeScripts');
         $this->load->view('templates/menubar');
