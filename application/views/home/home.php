@@ -176,7 +176,7 @@ sa130068
 	<div class="student-call">
 		<h3>Tražiš predavača?</h3>
 		<p>Časovi matematike, engleskog, gitare, programiranja...</p>
-		<a href="<?php echo site_url()."/search/search"; ?>" type="submit" class="btn btn-default btn-lg">Nađi predavača</a>
+		<a href="<?php echo site_url()."/search"; ?>" type="submit" class="btn btn-default btn-lg">Nađi predavača</a>
 	</div>
 </div>
 
