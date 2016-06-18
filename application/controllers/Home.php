@@ -324,11 +324,6 @@ class Home extends CI_Controller {
                     show_404();
                 endif;
                 $city = $_POST['city'];
-                if (!isset($_POST['phone']) || !$this->validation->Phone($_POST['phone'])):
-                    $failed |= PASSWORDMATCH;
-                endif;
-                $phone = $_POST['phone'];
-
 
                 if ($failed == TUTOR):
                     $user = array(
@@ -339,8 +334,8 @@ class Home extends CI_Controller {
                     );
                     $userID = $this->UserModel->createTutor($user);
                     
-                    $this->usermodel->setContact($userID, $phone);
-                    $this->userModel->setRegion($userID, $city);
+                    $this->UserModel->setContact($userID, $phone);
+                    $this->UserModel->setRegion($userID, $city);
                     
                     $_SESSION['userID'] = $userID;
                     $_SESSION['userName'] = $this->UserModel->getDisplayName($user);
