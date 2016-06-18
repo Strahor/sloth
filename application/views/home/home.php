@@ -49,8 +49,8 @@ sa130068
 		<a class="link-tutor" href="<?php echo site_url()."/user/profile/".$results[0]['idTutor']; ?>">
 			<img width="300px" height="300px" src="<?php echo $results[0]['slika']; ?>" class="tut-image img-rounded img-responsive center-block" />
 		
-			<div class="grade">
-			<div font-size="14px" class="grade-name"><?php echo $results[0]['ime']; ?></div>
+			<div font-size="14px" class="grade">
+			<div class="grade-name"><?php echo $results[0]['ime']; ?></div>
 				<div class="grade-stars"<!--<?php echo $results[0]['ukupnaOcena']; ?>-->>
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
@@ -69,8 +69,8 @@ sa130068
 		<a class="link-tutor" href="<?php echo site_url()."/user/profile/".$results[1]['idTutor']; ?>">
 			<img width="300px" height="300px" src="<?php echo $results[1]['slika']; ?>" class="tut-image img-rounded img-responsive center-block" />
 		
-			<div class="grade">
-			<div font-size="14px" class="grade-name"><?php echo $results[1]['ime']; ?></div>
+			<div font-size="14px"  class="grade">
+			<div class="grade-name"><?php echo $results[1]['ime']; ?></div>
 				<div class="grade-stars"<!--<?php echo $results[1]['ukupnaOcena']; ?>-->>
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
@@ -89,8 +89,8 @@ sa130068
 		<a class="link-tutor" href="<?php echo site_url()."/user/profile/".$results[2]['idTutor']; ?>">
 			<img width="300px" height="300px" src="<?php echo $results[2]['slika']; ?>" class="tut-image img-rounded img-responsive center-block" />
 		
-			<div class="grade">
-			<div font-size="14px" class="grade-name"><?php echo $results[2]['ime']; ?></div>
+			<div font-size="14px" class="grade">
+			<div  class="grade-name"><?php echo $results[2]['ime']; ?></div>
 				<div class="grade-stars"<!--<?php echo $results[2]['ukupnaOcena']; ?>-->>
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
