@@ -385,7 +385,7 @@ class User extends CI_Controller {
         $this->load->model('subjectmodel');
         $this->load->model('usermodel');
 
-        if ($this->subjectmodel->getSubject($subject) == NULL || $this->subjectmodel->getDiscipline($subject, $discipline)):
+        if ($this->subjectmodel->getSubject($subject) == NULL || $this->subjectmodel->getDiscipline($subject, $discipline) == NULL):
             show_404();
         endif;
 
