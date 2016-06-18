@@ -734,8 +734,8 @@ $(function() {
         $("#datetimepicker3").on("dp.change", function (e) {
             $('#datetimepicker4').data("DateTimePicker").minDate(e.date);
         });
-        $("#datetimepicker3").on("dp.change", function (e) {
-            $('#datetimepicker4').data("DateTimePicker").maxDate(e.date);
+        $("#datetimepicker4").on("dp.change", function (e) {
+            $('#datetimepicker3').data("DateTimePicker").maxDate(e.date);
         });
 });
 </script>
