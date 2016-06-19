@@ -330,7 +330,7 @@ sa130068
 
                         <div class=form-group>
                             <div class=form-group>
-                                <label for="#datetimepickercert">Do:</label>
+                                <label for="#datetimepickercert">Datum:</label>
                                 <div class='input-group date' id='datetimepickercert'>
                                     <input name="expires" id="datetimepickercert-input" type='text' class="form-control" />
                                     <span class="input-group-addon">
