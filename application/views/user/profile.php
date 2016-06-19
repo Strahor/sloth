@@ -579,7 +579,7 @@ sa130068
                 foreach($workExperience as $job):
                     echo '<div class="experience-item"><!--Pocetak bloka-->';
                     echo '<div class="row">';
-                    echo '<div class="col-sm-6 no-padding-left">';
+                    echo '<div class="col-sm-6 col-md-7 col-lg-8 no-padding-left">';
                     echo '<div class="experience-name pull-left">'.$job['naziv'];
                     if ($loggedIn && $profileID == $_SESSION['userID']):
                         ?>
