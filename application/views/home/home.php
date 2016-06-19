@@ -98,7 +98,6 @@ sa130068
 					<span class="glyphicon glyphicon-star"></span>
 					<span class="glyphicon glyphicon-star"></span>
 				</div>
-                        <div class="my-rating">
 			</div>
 			</a>
 		</div>
